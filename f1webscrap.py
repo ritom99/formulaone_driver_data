@@ -26,7 +26,7 @@ from bs4 import BeautifulSoup
 # In[256]:
 
 
-url = "https://www.formula1.com/en/results.html/2018/drivers/KIMRAI01/kimi-raikkonen.html"
+url = "https://www.formula1.com/en/results.html/2016/drivers/LEWHAM01/lewis-hamilton.html"
 html = urlopen(url)
 
 
@@ -76,7 +76,7 @@ for row in list_rows:
 
 df = pd.DataFrame(races)
 df1 = df[0].str.split(',', expand = True)
-df1.head(20)
+df1.head(25)
 
 
 # In[263]:
@@ -108,7 +108,7 @@ df3.head()
 
 frames = [df3,df1]
 df4= pd.concat(frames)
-df4.head(20)
+df4.head(25)
 
 
 # In[267]:
@@ -122,7 +122,7 @@ df5.head()
 
 
 df5.reset_index(inplace = True, drop = True)
-df5.head(20)
+df5.head(25)
 
 
 # In[269]:
@@ -136,7 +136,7 @@ df5.shape
 
 
 df6 = df5.drop(df5.index[0])
-df6.head(20)
+df6.head(25)
 
 
 # In[271]:
@@ -161,9 +161,9 @@ for i in points:
     y.append(int(i))
 x = df6[' Grand Prix']
 axes = plt.gca()
-axes.set_ylim([0,25])
+axes.set_ylim([0,26])
 plt.plot(x, y, label = 'Points')
-plt.title('Kimi Raikkonen')
+plt.title('Lewis Hamilton')
 plt.legend()
 plt.show()
 
@@ -181,7 +181,3 @@ plt.show()
 
 
 # In[ ]:
-
-
-
-
