@@ -8,4 +8,4 @@ y-axis = points scored
 
 To plot for a different driver, enter the driver's url from the site and there you have it.
 
-![Alt text](ver.png?raw=true "Max Verstappen Record")
+![Alt text](ver33.png?raw=true "Max Verstappen 2018 Season")
